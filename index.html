@@ -31,7 +31,7 @@
 
         }
         body{
-            background-image: url("The_backrooms_recreation_digital.png");
+            background-image: url("");
             background-size:cover;
             height: 100%;
         }
@@ -42,10 +42,11 @@
     </style>
 </head>
 <body>
-    <h1>Score:
+    <h1>Найди все цифры</h1>
+    <h1>Очки:
         <span class="score"></span>
     </h1>
-    <h1>Time:
+    <h1>Время:
         <span class="time"></span>
     </h1>
     <div class="row">
@@ -53,14 +54,14 @@
     <script type="text/javascript">
     //див-родитель
     let time_number = document.querySelector(".time")
-    let time = 5
+    let time = 21
     let text = document.querySelector(".score")
     let score = 0
     let row = document.querySelector(".row");
 
 
     //хранение картинок
-    let images = ["kto.png", "lepesha.png", "Biktor.png", "sadBiktor.jpg", "cupofBiktor.png", "cchge.jpg", "kto.png", "lepesha.png", "Biktor.png", "sadBiktor.jpg", "cupofBiktor.png", "cchge.jpg"];
+    let images = ["six2.jpg", "three.jpg", "images.png", "nine.jpg", "four.jpg", "zero.jpg", "six2.jpg", "three.jpg", "images.png", "nine.jpg", "four.jpg", "zero.jpg"];
 
     let past_item = null
     for(let i=0;i<12;i=i+1){
@@ -98,17 +99,19 @@
     }
     function finish(){
             if(score >=6){
-                alert("Вы выиграли");
+                alert("Найдены все цифры");
             }
-            else{alert("Проигрыш")}
+            else{alert("Вы не нашли все цифры")}
             clearInterval(int1)
         }
+
     function timer(){
         time = time - 1
         time_number.innerHTML = time
     }
-    setTimeout(finish,5000)
+    setTimeout(finish,21000)
     let int1 = setInterval(timer,1000)
+
 
     </script>
 </body>
